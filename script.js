@@ -14,3 +14,23 @@ if (mailCorrect== true) {
 } else {
     document.getElementById("validation").innerHTML = "spiacenti, la mail non è corretta";
 }
+
+
+// Gioco Dadi //
+
+var userDice = Math.floor(Math.random() * 6) + 1;
+var cpuDice = Math.floor(Math.random() * 6) + 1;
+
+console.log(userDice);
+console.log(cpuDice);
+
+if (userDice > cpuDice) {
+    document.getElementById("result").innerHTML = "Hai Vinto";
+  } else if (userDice < cpuDice) {
+    document.getElementById("result").innerHTML = "Hai Perso";
+  } else {
+    document.getElementById("result").innerHTML = "Pareggio";
+  }
+
+  document.getElementById("user-score").innerHTML= "il tuo dado ha dato " + userDice;
+  document.getElementById("cpu-score").innerHTML= "l dado della cpu ha dato " + cpuDice;
